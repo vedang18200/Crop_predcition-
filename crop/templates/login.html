@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <div class="image-container">
+        <img src="{% static 'img/pexels-ellie-burgin-1661546-26200942.jpg' %}" alt="Background Image" class="background-img"/>
+    </div>
+    <header class="project-title-box">
+        <img src="{% static 'img/Screenshot 2024-08-16 181437.png' %}" alt="Logo" class="logo-image"/>
+        <h1>Smart Agriculture Production</h1>
+    </header>
+    <main class="container">
+        <div class="login-form">
+            <h1>Login</h1>
+            <form method="post" action="{%url 'auth'%}">
+                {% csrf_token %}
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Login</button>
+            </form>
+            <p class="switch-to-register">Don't have an account? <a href="#">Register here</a></p>
+        </div>
+    </main>
+</body>
+</html>

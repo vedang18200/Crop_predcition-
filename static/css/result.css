@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.project-title-box {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.logo-container {
+    margin-right: 20px; /* Space between logo and title */
+}
+
+.logo-image {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%; /* Makes the logo round */
+    object-fit: cover; /* Ensures the image is not distorted */
+}
+
+.title-container h1 {
+    margin: 0;
+    font-size: 24px;
+    font-family: monospace;
+    color: #f4f4f4;
+    text-align: left;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url( 'pexels-kelly-1179532-26150411.jpg'); 
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+header {
+    width: 100%;
+    background-color: #aedf197e; /* Adjust background color as needed */
+    padding: 20px 0;
+    border-radius: 10px 10px 0 0; /* Round only the top corners */
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333; /* Adjust text color as needed */
+}
+
+.result-container {
+    background-color: rgba(247, 245, 245, 0.9); /* Semi-transparent white */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px; /* Adjusted width for better centering */
+    margin: 120px auto 20px auto; /* Centered container with top margin for spacing */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center; /* Centered text inside result container */
+}
+
+h3 {
+    font-weight: bold; /* Make headings bold */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #555;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+#result-display {
+    font-size: 20px;
+    font-weight: bold; /* Make predicted crop bold */
+    text-transform: capitalize; /* Capitalize first letter */
+}

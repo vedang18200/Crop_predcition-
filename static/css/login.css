@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial;
+}
+
+.image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.background-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-title-box {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.project-title-box img.logo-image {
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Ensure logo is square */
+    border-radius: 50%; /* Makes the logo circular */
+    margin-right: 15px; /* Space between logo and text */
+}
+
+.project-title-box h1 {
+    font-size: 24px;
+    font-family: monospace;
+}
+
+.container {
+    position: relative;
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 2; /* Ensure it appears above other elements */
+}
+
+.login-form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background-color: #45a049;
+}
+
+.switch-to-register {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.switch-to-register a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.switch-to-register a:hover {
+    text-decoration: underline;
+}

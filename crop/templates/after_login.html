@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Prediction</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/after_login.css' %}">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="{% static 'img/logo.png' %}" alt="Logo" class="logo-image" />
+            Smart Agriculture Production
+        </div>
+        <ul>
+            <li> <h1> Welcome Admin </h1>
+        </ul>
+    </nav>
+
+    <section class="home-section">
+        <div class="home-content">
+            <h1>Optimize Your Crop Plantation</h1>
+            <p>Welcome to our Crop Plantation Detection System. Our machine learning model takes into account various factors such as nitrogen, potassium, temperature, and humidity to predict the most suitable crop for your area.</p>
+            <p>By inputting your soil and environmental data, you can receive tailored recommendations on the best crops to plant, helping you achieve better yields and optimize resource use.</p>
+            <a href="{% url 'main' %}" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <p>Smart Agriculture Production is dedicated to advancing modern farming techniques through technology. Our platform helps farmers optimize crop yields by providing accurate crop predictions based on soil content, weather conditions, and other key factors.</p>
+        <p>Our mission is to empower farmers with the tools and knowledge they need to make informed decisions that lead to sustainable and profitable farming practices.</p>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need support, feel free to reach out to us:</p>
+        <ul>
+            <li>Email: support@smartagriculture.com</li>
+            <li>Phone: +91 12345 67890</li>
+            <li>Address: 123 Farming Lane, Agriculture City, India</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Smart Agriculture Production. All rights reserved.</p>
+    </footer>
+</body>
+</html>

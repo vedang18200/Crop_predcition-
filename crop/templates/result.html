@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/result.css' %}">
+</head>
+<body>
+    <div class="project-title-box">
+        <div class="logo-container">
+            <img src="{% static 'img/Screenshot 2024-08-16 181437.png' %}" alt="Logo" class="logo-image"/>
+        </div>
+        <div class="title-container">
+            <h1>Smart Agriculture Production</h1>
+        </div>
+    </div>
+    </div>
+    <div class="background-image"></div>
+    <div class="result-container">
+        <header>
+            <h1>Result</h1>
+        </header>
+        <h3>Your Input Data:</h3>
+        <ul>
+            <li><strong>Nitrogen (N):</strong> <span id="nitrogen-display" class="bold-text">{{ nitrogen }}</span></li>
+            <li><strong>Phosphorus (P):</strong> <span id="phosphorus-display" class="bold-text">{{ phosphorus }}</span></li>
+            <li><strong>Potassium (K):</strong> <span id="potassium-display" class="bold-text">{{ potassium }}</span></li>
+            <li><strong>Temperature (°C):</strong> <span id="temperature-display" class="bold-text">{{ temperature }}</span></li>
+            <li><strong>Humidity (%):</strong> <span id="humidity-display" class="bold-text">{{ humidity }}</span></li>
+            <li><strong>pH Value:</strong> <span id="phvalue-display" class="bold-text">{{ phvalue }}</span></li>
+            <li><strong>Rainfall (mm):</strong> <span id="rainfall-display" class="bold-text">{{ rainfall }}</span></li>
+        </ul>
+        <h3>Best crop for these conditions would be:</h3>
+        <span id="result-display" class="bold-text">{{ predicted_crop|capfirst }}</span>
+    </div>
+</body>
+</html>

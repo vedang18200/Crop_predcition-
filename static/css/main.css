@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 170%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.background-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-title-box {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    color: white;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.logo-container {
+    flex: 0 0 auto; /* Prevents the logo from growing */
+    margin-right: 20px;
+}
+
+.logo-image {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%; /* Makes the logo round */
+    object-fit: cover; /* Ensures the image is not distorted */
+}
+
+.title-container {
+    flex: 1; /* Allows the title to take the remaining space */
+    display: flex;
+    align-items: center;
+}
+
+.project-title-box h1 {
+    margin: 0;
+    font-size: 24px;
+    font-family: monospace;
+    text-align: left;
+}
+
+.input-form {
+    width: 100%;
+    max-width: 600px; /* Increased width for better readability */
+    background-color: white;
+    padding: 40px; /* Adjusted padding */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px; /* Adjusted margin-top */
+    box-sizing: border-box;
+}
+
+.input-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.input-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.input-form button:hover {
+    background-color: #45a049;
+}

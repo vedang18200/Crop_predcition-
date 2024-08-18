@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+    <div class="image-container">
+        <img src="{% static 'img/pexels-kelly-1179532-26150411.jpg' %}" alt="agro img" class="background-img"/>
+    </div>
+    <div class="project-title-box">
+        <div class="logo-container">
+            <img src="{% static 'img/Screenshot 2024-08-16 181437.png' %}" alt="Logo" class="logo-image"/>
+        </div>
+        <div class="title-container">
+            <h1>Smart Agriculture Production</h1>
+        </div>
+    </div>
+    
+    <div class="input-form">
+        <form action="{% url 'predict' %}" method="get">
+            <label for="nitrogen">Enter Nitrogen content in the soil (N):</label>
+            <input type="number" id="nitrogen" name="nitrogen" step="any" required>
+            
+            <label for="phosphorus">Enter Phosphorus content in the soil (P):</label>
+            <input type="number" id="phosphorus" name="phosphorus" step="any" required>
+            
+            <label for="potassium">Enter Potassium content in the soil (K):</label>
+            <input type="number" id="potassium" name="potassium" step="any" required>
+            
+            <label for="temperature">Enter Temperature (°C):</label>
+            <input type="number" id="temperature" name="temperature" step="any" required>
+            
+            <label for="humidity">Enter Humidity (%):</label>
+            <input type="number" id="humidity" name="humidity" step="any" required>
+            
+            <label for="phvalue">Enter pH Value of the soil:</label>
+            <input type="number" id="phvalue" name="phvalue" step="any" required>
+            
+            <label for="rainfall">Enter Rainfall (mm):</label>
+            <input type="number" id="rainfall" name="rainfall" step="any" required>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        // Retrieve the username from the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get('username');
+        
+        // Display the username in the specified span
+        document.getElementById('username-display').textContent = username || "User";
+    </script>
+</body>
+</html>
